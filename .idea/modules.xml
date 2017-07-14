@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Container0/.idea/Container0.iml" filepath="$PROJECT_DIR$/../Container0/.idea/Container0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Container2/.idea/Container2.iml" filepath="$PROJECT_DIR$/../Container2/.idea/Container2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GreatPianoService.iml" filepath="$PROJECT_DIR$/.idea/GreatPianoService.iml" />
+    </modules>
+  </component>
+</project>
