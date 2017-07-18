@@ -9,7 +9,6 @@ from django.contrib.auth import logout as django_logout
 from django.contrib.auth import authenticate
 
 
-
 def register(request):
 
     if request.method == "GET":
