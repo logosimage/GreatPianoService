@@ -14,6 +14,25 @@ class User(AbstractUser):
 
     email = models.EmailField()
 
+    cell_phone= models.CharField(max_length=20, null=True, blank=True)
+
+    work_phone = models.CharField(max_length=20, null=True, blank=True)
+
+    home_phone = models.CharField(max_length=20, null=True, blank=True)
+
+    address = models.CharField(max_length=20, null=True, blank=True)
+
+    city = models.CharField(max_length=20, null=True, blank=True)
+
+    state = models.CharField(max_length=20, null=True, blank=True)
+
+    zip = models.CharField(max_length=20, null=True, blank=True)
+
+
+
+
+
+
     def __str__(self):
         return self.email
 

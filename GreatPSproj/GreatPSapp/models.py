@@ -18,3 +18,4 @@ class Piano(models.Model):
     size = models.CharField(max_length=30)
     client = models.ForeignKey(User)
     last_serviced = models.DateField(null=True, blank=True)
+    customerID = models.CharField(max_length=10)
