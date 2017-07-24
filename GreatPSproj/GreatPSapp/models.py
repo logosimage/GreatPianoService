@@ -13,8 +13,6 @@ class Piano(models.Model):
     )
 
     REQUEST_CHOICES = (
-
-
         ('tune', 'Tune'),
         ('repair', 'Repair'),
         ('key services', 'Key Services'),
@@ -26,9 +24,10 @@ class Piano(models.Model):
         ('purchase evaluation', 'Purchasing Evaluation'),
         ('humidity control', 'Humidity Control'),
         ('annual contract', 'Annual Contract')
+         )
 
 
-    )
+
     make = models.CharField(max_length=30)
     mod = models.CharField(max_length=30, choices=MODEL_CHOICES)
     serial_num = models.CharField(max_length=30, null=True, blank=True)
@@ -45,12 +44,40 @@ class Piano(models.Model):
 class Service_Record(models.Model):
     piano = models.ForeignKey(Piano)
     # last_serviced = models.DateField()
-    date = models.DateTimeField()
+    date = models.DateField(null=True, blank=True)
     service_performed = models.CharField(max_length=255)
     service_hours = models.CharField(max_length=10)
     service_count = models.CharField(max_length=10)
     service_cost = models.CharField(max_length=10)
     service_notify = models.CharField(max_length=10)
+
+
+
+class Service_Request(models.Model):
+    tune = models.CharField(max_length=20),
+    repair = models.CharField(max_length=20),
+    key_services = models.CharField(max_length=20),
+    regulation = models.CharField(max_length=20),
+    voicing = models.CharField(max_length=20),
+    cleaning = models.CharField(max_length=20),
+    restoration = models.CharField(max_length=20),
+    appraisal = models.CharField(max_length=20),
+    purchase_evaluation = models.CharField(max_length=20),
+    humidity_control = models.CharField(max_length=20),
+    annual_contract = models.CharField(max_length=20)
+
+
+class Schedule_Appointment(models.Model):
+    day = models.CharField(max_length=10)
+    date = models.DateTimeField(null=True, blank=True)
+
+
+
+
+
+
+
+
 
 
 

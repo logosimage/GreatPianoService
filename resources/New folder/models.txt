@@ -1,0 +1,23 @@
+  # REQUEST_CHOICES = (
+    #
+    #     ('tune', 'Tune'),
+    #     ('repair', 'Repair'),
+    #     ('key services', 'Key Services', (
+    #         ('key tops', 'Key Tops', (
+    #             ('keytop replacement', 'Keytop Replacement'),
+    #             ('minor keytop repair', 'Minor Keytop Repair'),
+    #         )),
+    #
+    #         ('key bushings', 'Key Bushings'),
+    #         ('key top')
+    #     )),
+    #     ('regulation', 'Regulation'),
+    #     ('voicing', 'Voicing'),
+    #     ('cleaning', 'Cleaning'),
+    #     ('restoration', 'Restoration'),
+    #     ('appraisal', 'Appraisal'),
+    #     ('purchase evaluation', 'Purchasing Evaluation'),
+    #     ('humidity control', 'Humidity Control'),
+    #     ('annual contract', 'Annual Contract')
+
+    # )
