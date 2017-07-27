@@ -2,15 +2,14 @@ from django.db import models
 from accountapp.models import User
 
 
-
 class Piano(models.Model):
     MODEL_CHOICES = (
 
-         ('grand','Grand'),
-         ('old upright', 'Old Upright'),
-         ('console', 'Console'),
-         ('studio','Studio'),
-         ('spinet','Spinet')
+        ('grand', 'Grand'),
+        ('old upright', 'Old Upright'),
+        ('console', 'Console'),
+        ('studio', 'Studio'),
+        ('spinet', 'Spinet')
     )
 
     REQUEST_CHOICES = (
@@ -25,9 +24,7 @@ class Piano(models.Model):
         ('purchase evaluation', 'Purchasing Evaluation'),
         ('humidity control', 'Humidity Control'),
         ('annual contract', 'Annual Contract')
-         )
-
-
+    )
 
     make = models.CharField(max_length=30)
     mod = models.CharField(max_length=30, choices=MODEL_CHOICES)
@@ -53,41 +50,25 @@ class Service_Record(models.Model):
     service_notify = models.CharField(max_length=10)
 
 
-
 class Service_Request(models.Model):
-    tuning = models.CharField(max_length=20),
-    repair = models.CharField(max_length=20),
-    key_services = models.CharField(max_length=20),
-    regulation = models.CharField(max_length=20),
-    voicing = models.CharField(max_length=20),
-    cleaning = models.CharField(max_length=20),
-    restoration = models.CharField(max_length=20),
-    appraisal = models.CharField(max_length=20),
-    purchase_evaluation = models.CharField(max_length=20),
-    humidity_control = models.CharField(max_length=20),
+    tune = models.CharField(max_length=20, null=True, blank=True)
+    regulation = models.CharField(max_length=20, null=True, blank=True)
+    repair = models.CharField(max_length=20, null=True, blank=True)
+    key_services = models.CharField(max_length=20, null=True, blank=True)
+    cleaning = models.CharField(max_length=20, null=True, blank=True)
+    appraisal = models.CharField(max_length=20, null=True, blank=True)
+    humidity_control = models.CharField(max_length=20, null=True, blank=True)
+    purchase_consulting = models.CharField(max_length=20, null=True, blank=True)
+
+
+
+
+
     annual_contract = models.CharField(max_length=20)
+
+
 
 
 class Schedule_Appointment(models.Model):
     day = models.CharField(max_length=10)
     date = models.DateTimeField(null=True, blank=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

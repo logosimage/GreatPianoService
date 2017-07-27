@@ -7,29 +7,16 @@
     <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
 </head>
 <body>
-<style>
-   /*h1{*/
-       /*text-align: center;*/
-   /*}*/
-    /*#home{*/
-    /*10px*/
-        /*text-align: ;*/
-
-        /*font-size: 50px;*/
-    /*}*/
-</style>
-
-<div class="header">
-    <div><img src="{% static 'GreatPSapp/images/LDPS_Logo6.PNG' %}"/><h1>GREAT PIANO SERVICE</h1></div>
-    <div>
-        <section1 class="section1">
-            <div class="Home", id="home"><a href="/">Home</a></div>
-            <div class="Services" id="services"><a href="/services/">Services</a></div>
-            <div class="login" id="login"><a href="/login/">Client login</a></div>
-            <div class="Schedule" id="schedule"><a href="/schedule_appointment/">Schedule Appointment</a></div>
-            <div class="support" id="support"><a href="/support/">Support</a></div>
-            <div class="contact" id="contact"><a href="/contact/">Contact</a></div>
-        </section1>
+<div class="flex-container">
+    <div><img src="{% static 'GreatPSapp/images/LDPS_Logo6.PNG' %}"/></div>
+    <h1 id="h1">GREAT PIANO SERVICE</h1>
+    <div id="navbar">
+        <a id="item1" href="/">Home</a>
+            <a  id="item2" href="/services/">Services</a>
+            <a id="item3 " href="/login/">Client login</a>
+            <a id="item4" href="/schedule_appointment/">Schedule Appointment</a>
+            <a id="5" href="/support/">Support</a>
+            <a id="item6" href="/contact/">Contact</a>
     </div>
 </div>
 <img src="{% static 'GreatPSapp/images/Piano0_oldhands.png' %}" id="image1" style=""/>
@@ -39,3 +26,5 @@
 
 </body>
 </html>
+
+

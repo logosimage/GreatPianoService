@@ -7,19 +7,16 @@
     <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
 </head>
 <body>
-
-<div class="header">
-    <div><img src="{% static 'GreatPSapp/images/LDPS_Logo6.PNG' %}"/><h1>GREAT PIANO SERVICE</h1></div>
-    <div>
-        <section1 class="section1">
-            <div class="Home"><a href="/">Home</a></div>
-            <div class="Services"><a href="/services/">Services</a></div>
-            <div class="login"><a href="/login/">Client login</a></div>
-            <div class="Schedule"><a href="/schedule_appointment/">Schedule Appointment</a></div>
-            <div class="support"><a href="/support/">Support</a></div>
-            <div class="contact"><a href="/contact/">Contact</a></div>
-        </section1>
-
+<div class="flex-container">
+    <div><img src="{% static 'GreatPSapp/images/LDPS_Logo6.PNG' %}"/></div>
+    <h1 id="h1">GREAT PIANO SERVICE</h1>
+    <div id="navbar">
+        <a href="/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/login/">Client login</a>
+            <a href="/schedule_appointment/">Schedule Appointment</a>
+            <a href="/support/">Support</a>
+            <a href="/contact/">Contact</a>
     </div>
 </div>
 <img src="{% static 'GreatPSapp/images/Piano0_oldhands.png' %}" id="image1" style=""/>
@@ -46,12 +43,15 @@
 <div id="selectd">Pick A Service
     <ul>Which services would you like to schedule?</ul>
     <ul>Check all that apply</ul>
-<ul><form></ul><input type="checkbox" name="tuning" >Tuning</form>
-<form></ul><input type="checkbox" name="contract" >Annaul Contract</form>
-<form></ul><input type="checkbox" name="repair" >Repairs</form>
-<form></ul><input type="checkbox" name="regulation" >Regulation</form>
+<ul><form></ul><input type="checkbox" name="tuning" >Tunning</form>
+   <form></ul><input type="checkbox" name="regulation" >Regulation</form>
+    <form></ul><input type="checkbox" name="repair" >Repair</form>
+    <form></ul><input type="checkbox" name="keys" >Key Services</form>
+<form></ul><input type="checkbox" name="contract" >Annual Contract</form>
+
+<form></ul><input type="checkbox" name="cleaning" >Cleaning</form>
 <form></ul><input type="checkbox" name="appraisal" >Appraisal</form>
-    <form></ul><input type="checkbox" name="purchase consult" >Purchase Consulting</form></div>
+    <form></ul><input type="checkbox" name="consult" >Purchase Consulting</form></div>
 
 
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>

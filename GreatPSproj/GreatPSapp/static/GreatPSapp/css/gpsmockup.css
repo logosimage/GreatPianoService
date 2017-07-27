@@ -1,5 +1,6 @@
 
-.header{
+.flex-container{
+    display:flex;
     width: 1600px;
     height:200px;
     background-color: #fac716;
@@ -9,6 +10,14 @@
 }
 
 #h1{
+
+
+}
+
+#navbar{
+    item:flex-end;
+    font-size:30px;
+
 
 }
 .section{
