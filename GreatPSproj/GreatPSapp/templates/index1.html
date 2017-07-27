@@ -1,27 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <div class="header">
-        <div>
-            <img src="images/LDPS_Logo6.PNG"/>
-        </div>
-        <div class="menu">
-        <div class="Home">Home</div>
-        <div class="Services">Services</div>
-        <div class="login">Clients login</div>
-        <div class="Schedule">Schedule Appointment</div>
-            </div>
-    </div>
-
-    <img src="Piano0_oldhands.png" id="image1" style=""/>
-
-
+    <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
 </head>
 <body>
+<style>
+   /*h1{*/
+       /*text-align: center;*/
+   /*}*/
+    /*#home{*/
+    /*10px*/
+        /*text-align: ;*/
 
-<script src="gpsmockup.js"></script>
-<link rel="stylesheet" href="gpsmockup.css">
+        /*font-size: 50px;*/
+    /*}*/
+</style>
+
+<div class="header">
+    <div><img src="{% static 'GreatPSapp/images/LDPS_Logo6.PNG' %}"/><h1>GREAT PIANO SERVICE</h1></div>
+    <div>
+        <section1 class="section1">
+            <div class="Home", id="home"><a href="/">Home</a></div>
+            <div class="Services" id="services"><a href="/services/">Services</a></div>
+            <div class="login" id="login"><a href="/login/">Client login</a></div>
+            <div class="Schedule" id="schedule"><a href="/schedule_appointment/">Schedule Appointment</a></div>
+            <div class="support" id="support"><a href="/support/">Support</a></div>
+            <div class="contact" id="contact"><a href="/contact/">Contact</a></div>
+        </section1>
+    </div>
+</div>
+<img src="{% static 'GreatPSapp/images/Piano0_oldhands.png' %}" id="image1" style=""/>
+
+
+<script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
+
 </body>
 </html>

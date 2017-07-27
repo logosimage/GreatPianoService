@@ -7,7 +7,8 @@ class Piano(models.Model):
     MODEL_CHOICES = (
 
          ('grand','Grand'),
-         ('upright', 'Upright'),
+         ('old upright', 'Old Upright'),
+         ('console', 'Console'),
          ('studio','Studio'),
          ('spinet','Spinet')
     )
@@ -54,7 +55,7 @@ class Service_Record(models.Model):
 
 
 class Service_Request(models.Model):
-    tune = models.CharField(max_length=20),
+    tuning = models.CharField(max_length=20),
     repair = models.CharField(max_length=20),
     key_services = models.CharField(max_length=20),
     regulation = models.CharField(max_length=20),

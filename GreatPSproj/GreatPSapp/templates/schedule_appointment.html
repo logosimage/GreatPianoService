@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Schedul Appointment</title>
+    <title>Schedule Appointment</title>
     <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
 </head>
 <body>
@@ -19,9 +19,39 @@
             <div class="support"><a href="/support/">Support</a></div>
             <div class="contact"><a href="/contact/">Contact</a></div>
         </section1>
+
     </div>
 </div>
 <img src="{% static 'GreatPSapp/images/Piano0_oldhands.png' %}" id="image1" style=""/>
+<h1>Schedule An Appointment</h1><br><br>
+<h1>For information or to schedule and appointment - please call or send an email</h1><br><br>
+<h1>SCHEDULE AN APPOINT ONLINE: Fill out the form below </h1>
+
+<div id="selectd">Select a Day of the Week
+<ul><form></ul><input type="checkbox" name="any day" >Any Day</form>
+<form></ul><input type="checkbox" name="any day" >Monday</form>
+<form></ul><input type="checkbox" name="any day" >Tuesday</form>
+<form></ul><input type="checkbox" name="any day" >Wednesday</form>
+<form></ul><input type="checkbox" name="any day" >Thursday</form>
+<form></ul><input type="checkbox" name="any day" >Friday</form>
+<form></ul><input type="checkbox" name="any day" >Saturday</form></div>
+
+<div id="time">Time
+<ul><form></ul><input type="checkbox" name="any day" >Any Time</form>
+<form></ul><input type="checkbox" name="any day" >Morning Any Time</form>
+<form></ul><input type="checkbox" name="any day" >Afternoon Any Time</form><br>
+    <form>Preferred Date and Time:</form>
+    <form></ul><input name="any day" ></form></div><br>
+
+<div id="selectd">Pick A Service
+    <ul>Which services would you like to schedule?</ul>
+    <ul>Check all that apply</ul>
+<ul><form></ul><input type="checkbox" name="tuning" >Tuning</form>
+<form></ul><input type="checkbox" name="contract" >Annaul Contract</form>
+<form></ul><input type="checkbox" name="repair" >Repairs</form>
+<form></ul><input type="checkbox" name="regulation" >Regulation</form>
+<form></ul><input type="checkbox" name="appraisal" >Appraisal</form>
+    <form></ul><input type="checkbox" name="purchase consult" >Purchase Consulting</form></div>
 
 
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>

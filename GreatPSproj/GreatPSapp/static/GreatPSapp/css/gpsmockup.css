@@ -2,39 +2,42 @@
 .header{
     width: 1600px;
     height:200px;
-    background-color: #F5EA05;
+    background-color: #fac716;
     position: fixed;
+    text-align: center;
 
 }
 
-.menu{
-    align: wrap;
+#h1{
+
+}
+.section{
+    width: 100%;
+    height: 500px;
+}
+
+
+#home{
+     text-align: center;
+
 
 }
 
-.home{
-    flex-wrap: wrap;
-
-}
-
-.services{
-    flex-wrap: wrap;
+#services{
+    font-family: "Garamond", "Georgia", "serif";
+    font:20px
 
 }
 
 .login{
-    flex-wrap: wrap;
 
 }
 
 .schedule{
-    flex-wrap: wrap;
+
 
 }
-.section1{
-    width: 100%;
-    height: 500px;
-}
+
 
 #image1{
     width: 1600px;

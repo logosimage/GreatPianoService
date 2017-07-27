@@ -17,7 +17,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from accountapp.views import login, register
-# from GreatPSapp.views import index
+# from GreatPSproj.templates import.index
+from GreatPSapp import views
+
 
 
 
@@ -28,8 +30,11 @@ urlpatterns = [
     # Accounts
     url(r'^accounts/register/$', register, name='register'),
     url(r'^accounts/login/$', login, name='login'),
-    # url(r'^index/$',index, name=index)
-
-
+    url(r'^$',views.index, name='index'),
+    url(r'^services/$',views.services, name='services'),
+    url(r'^login/$',views.login, name='login'),
+    url(r'^schedule_appointment/$',views.schedule_appointment, name='schedule_appointment'),
+    url(r'^support/$',views.support, name='support'),
+    url(r'^contact/$',views.contact, name='contact')
 
 ]
