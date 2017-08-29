@@ -14,6 +14,9 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -58,6 +61,11 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        # 'DIRS': [TEMPLATE_DIR, ]
+        # This code creates following error:
+        #     'APP_DIRS': True,
+                       # ^
+            # SyntaxError: invalid syntax 8/27/17
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,5 +127,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+STATICFILES_DIRS = [STATIC_DIR,]
 STATIC_URL = '/static/'
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')

@@ -59,11 +59,6 @@ class Service_Request(models.Model):
     appraisal = models.CharField(max_length=20, null=True, blank=True)
     humidity_control = models.CharField(max_length=20, null=True, blank=True)
     purchase_consulting = models.CharField(max_length=20, null=True, blank=True)
-
-
-
-
-
     annual_contract = models.CharField(max_length=20)
 
 
