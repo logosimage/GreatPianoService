@@ -13,15 +13,15 @@
 </head>
 <body class="body">
 <div class="flex-container">
-   
+
     <div class="titleGPS"><h1 id="h1">Great Piano Service</h1></div>
     <div id="navbar">
         <a id="item1" href="/">Home</a>
-            <a  id="item2" href="/services/">Services</a>
-            <a id="item3 " href="/login/">Client login</a>
-            <a id="item4" href="/scheduling/">Scheduling</a>
-            <a id="item5" href="/support/">Support</a>
-            <a id="item6" href="/contact/">Contact</a>
+        <a id="item2" href="/services/">Services</a>
+        <a id="item3 " href="/login/">Client login</a>
+        <a id="item4" href="/scheduling/">Scheduling</a>
+        <a id="item5" href="/support/">Support</a>
+        <a id="item6" href="/contact/">Contact</a>
     </div>
 </div>
 <!-- <img src="{% static 'GreatPSapp/images/Piano0_oldhands.png' %}" id="image1" style=""/> -->
@@ -29,35 +29,54 @@
 <h1>For information or to schedule and appointment - please call or send an email</h1><br><br>
 <h1>SCHEDULE AN APPOINTMENT ONLINE: Fill out the form below </h1>
 
-<div id="selectd">Select a Day of the Week
-<!-- <ul><form></ul><input type="checkbox" name="any day" >Any Day</form>
- --><form></ul><input type="checkbox" name="any day" >Monday</form>
-<form></ul><input type="checkbox" name="any day" >Tuesday</form>
-<form></ul><input type="checkbox" name="any day" >Wednesday</form>
-<form></ul><input type="checkbox" name="any day" >Thursday</form>
-<form></ul><input type="checkbox" name="any day" >Friday</form>
-<form></ul><input type="checkbox" name="any day" >Saturday</form></div>
+<form action="{% url 'scheduling' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div id="selectd">
 
-<div id="time">Time
-<ul><form></ul><input type="checkbox" name="any day" >Any Time</form>
-<form></ul><input type="checkbox" name="any day" >Morning Any Time</form>
-<form></ul><input type="checkbox" name="any day" >Afternoon Any Time</form><br>
-    <form>Preferred Date and Time:</form>
-    <form></ul><input name="any day" ></form></div><br>
+        <h2>Select a Day of the Week</h2>
 
-<div id="selectd">Pick A Service
-    <ul>Which services would you like to schedule?</ul>
-    <ul>Check all that apply</ul>
-<ul><form></ul><input type="checkbox" name="tuning" >Tunning</form>
-   <form></ul><input type="checkbox" name="regulation" >Regulation</form>
-    <form></ul><input type="checkbox" name="repair" >Repair</form>
-    <form></ul><input type="checkbox" name="keys" >Key Services</form>
-<form></ul><input type="checkbox" name="contract" >Annual Contract</form>
+        <ul>
+            <li><input type="checkbox" name="apt_day" value="Monday">Monday</li>
+            <li><input type="checkbox" name="apt_day" value="Tuesday">Tuesday</li>
+            <li><input type="checkbox" name="apt_day" value="Wednesday">Wednesday</li>
+            <li><input type="checkbox" name="apt_day" value="Thursday">Thursday</li>
+            <li><input type="checkbox" name="apt_day" value="Friday">Friday</li>
+            <li><input type="checkbox" name="apt_day" value="Saturday">Saturday</li>
+        </ul>
+    </div>
 
-<form></ul><input type="checkbox" name="cleaning" >Cleaning</form>
-<form></ul><input type="checkbox" name="appraisal" >Appraisal</form>
-    <form></ul><input type="checkbox" name="consult" >Purchase Consulting</form></div>
+    <div id="time">
+        <h2>Time</h2>
+        <ul>
+            <li><input type="checkbox" name="apt_time" value="Any Time">Any Time</li>
+            <li><input type="checkbox" name="apt_time" value="Morning Any Time">Morning Any Time</li>
+            <li><input type="checkbox" name="apt_time" value="Afternoon Any Time">Afternoon Any Time</li>
+        </ul>
+        Preferred Date and Time:<br>
+        <input name="pref-date-time" type="text">
+    </div>
+    <br>
 
+    <div id="selectd">
+        <h2>Pick A Service</h2>
+        Which services would you like to schedule?<br>
+        Check all that apply
+        <ul>
+            <li><input type="checkbox" name="service_type" value="tuning">Tunning</li>
+            <li><input type="checkbox" name="service_type" value="regulation">Regulation</li>
+            <li><input type="checkbox" name="service_type" value="repair">Repair</li>
+            <li><input type="checkbox" name="service_type" value="keys">Key Services</li>
+            <li><input type="checkbox" name="service_type" value="contract">Annual Contract</li>
+
+            <li><input type="checkbox" name="service_type" value="cleaning">Cleaning</li>
+            <li><input type="checkbox" name="service_type" value="appraisal">Appraisal</li>
+            <li><input type="checkbox" name="service_type" value="consult">Purchase Consulting</li>
+        </ul>
+
+        <input type="submit" value="Submit">
+
+    </div>
+</form>
 
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
 

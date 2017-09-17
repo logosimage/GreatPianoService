@@ -1,5 +1,5 @@
 
-.flex-container{
+.flex-container {
     flex-direction: row;
     width: 1600px;
     background-color: #fac716;
@@ -7,91 +7,79 @@
     position: fixed;
     justify-content: space-around;
 
-
 }
-.logo6{
+
+.logo6 {
     justify-items: left;
 }
 
-.titleGPS{
+.titleGPS {
     font-family: 'Great Vibes', cursive;
     background-color: #fac716;
     /*font-size: 45px;*/
     text-align: left;
 
-
 }
 
-
-#navbar{
-    background-color:#fac716;
+#navbar {
+    background-color: #fac716;
     width: 1000px;
-    height: 20px
-    item:flex-end;
-    font-size:22px;
+    height: 20px;
+    /*item: flex-end;*/
+    font-size: 22px;
     text-align: center;
-   /* text border-color: transparent; */
+    /* text border-color: transparent; */
 
-    
 }
 
-.servicelinks{
+.servicelinks {
     display: flex;
 
-
 }
-   
 
-#item{
+#item {
     flex-direction: inherit;
 
-
 }
 
-}
-.section{
+.section {
     width: 100%;
     height: 500px;
 }
 
-
-#home{
-     text-align: center;
-
+#home {
+    text-align: center;
 
 }
 
-#services{
+#services {
     font-family: "Garamond", "Georgia", "serif";
-    font:20px
+    font-size: 20px;
 
 }
 
-.login{
+.login {
 
 }
 
-.schedule{
-
+.schedule {
 
 }
 
-.images{
+.images {
     display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: flex-end;
     width: 1000px;
     height: 100px;
-    
 
 }
 
+#images {
 
-#images{
-    
-     width: 180px;
+    width: 180px;
     height: 180px;
 }
 

@@ -1,5 +1,5 @@
-from django.db import models
 from accountapp.models import User
+from django.db import models
 
 
 class Piano(models.Model):
@@ -51,6 +51,9 @@ class Service_Record(models.Model):
 
 
 class Service_Request(models.Model):
+    requested_date = models.CharField(max_length=255)
+    requested_time = models.CharField(max_length=255)
+    pref_date_time = models.CharField(max_length=255)
     tune = models.CharField(max_length=20, null=True, blank=True)
     regulation = models.CharField(max_length=20, null=True, blank=True)
     repair = models.CharField(max_length=20, null=True, blank=True)
@@ -60,9 +63,6 @@ class Service_Request(models.Model):
     humidity_control = models.CharField(max_length=20, null=True, blank=True)
     purchase_consulting = models.CharField(max_length=20, null=True, blank=True)
     annual_contract = models.CharField(max_length=20)
-
-
-
 
 class Scheduling(models.Model):
     day = models.CharField(max_length=10)

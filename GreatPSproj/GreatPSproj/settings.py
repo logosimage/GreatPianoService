@@ -62,7 +62,9 @@ ROOT_URLCONF = 'GreatPSproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'accountapp', 'templates'),
+                 os.path.join(BASE_DIR, 'GreatPSapp', 'templates'),
+                 ],
         # 'DIRS': [TEMPLATE_DIR, ]
         # This code creates following error:
         #     'APP_DIRS': True,
