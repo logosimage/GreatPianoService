@@ -3,7 +3,9 @@
     flex-direction: row;
     width: 1600px;
     background-color: #fac716;
+    border-color: #fac716;
     position: fixed;
+    justify-content: space-around;
 
 
 }
@@ -14,23 +16,36 @@
 .titleGPS{
     font-family: 'Great Vibes', cursive;
     background-color: #fac716;
-    font-size: 50px;
-    text-align: center;
-
+    /*font-size: 45px;*/
+    text-align: left;
 
 
 }
 
+
 #navbar{
     background-color:#fac716;
-    width: 1600px;
+    width: 1000px;
     height: 20px
     item:flex-end;
-    font-size:30px;
+    font-size:22px;
     text-align: center;
+   /* text border-color: transparent; */
+
+    
+}
+
+.servicelinks{
+    display: flex;
+
+
+}
+   
 
 #item{
     flex-direction: inherit;
+
+
 }
 
 }
@@ -61,8 +76,22 @@
 
 }
 
+.images{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+    width: 1000px;
+    height: 100px;
+    
 
-#image1{
-    width: 1600px;
-    height: 500px;
 }
+
+
+#images{
+    
+     width: 180px;
+    height: 180px;
+}
+

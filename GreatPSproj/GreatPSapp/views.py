@@ -21,9 +21,9 @@ def services(request):
 def login(request):
     return render(request, 'login.html')
 
-def schedule_appointment(request):
-    return render(request, 'schedule_appointment.html')
-
+def scheduling(request):
+    return render(request, 'scheduling.html')
+    pass
 def support(request):
     return render(request, 'support.html')
 

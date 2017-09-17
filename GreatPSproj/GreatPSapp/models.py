@@ -64,6 +64,6 @@ class Service_Request(models.Model):
 
 
 
-class Schedule_Appointment(models.Model):
+class Scheduling(models.Model):
     day = models.CharField(max_length=10)
     date = models.DateTimeField(null=True, blank=True)
