@@ -28,13 +28,40 @@
 <h1>Schedule An Appointment</h1><br><br>
 <h1>For information or to schedule and appointment - please call or send an email</h1><br><br>
 <h1>SCHEDULE AN APPOINTMENT ONLINE: Fill out the form below </h1>
+<!--  url(r'^accounts/register/$', register, name='register'), -->
 
-<form action="{% url 'scheduling' %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
     <div id="selectd">
 
-        <h2>Select a Day of the Week</h2>
+    <h2>Contact Information</h2>
+    <ul>
+  
+    First Name:
+    <li><input type="text"></li><p>
+    Last Name:
+    <li><input type="text"></li><p>
+    Email:
+    <li><input type="email"></li><p>
+    Cell phone:
+    <li><input type="text"></li><p>
+    Work phone:
+    <li><input type="text"></li><p>
+    Home phone:
+    <li><input type="text"></li><p>
+      Address:
+    <li><input type="text"></li><p>
+    City:
+    <li><input type="text"></li><p>
+    State:
+    <li><input type="text"></li><p>
+    
+    Zip:
+    <li><input type="text"></li><p>
+       </ul>
 
+
+        <h2>Select a Day of the Week</h2>
+<form action="{% url 'scheduling' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
         <ul>
             <li><input type="checkbox" name="apt_day" value="Monday">Monday</li>
             <li><input type="checkbox" name="apt_day" value="Tuesday">Tuesday</li>

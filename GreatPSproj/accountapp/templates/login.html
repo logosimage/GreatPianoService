@@ -6,7 +6,7 @@
 <head >
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Login/Regester</title>
     <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
 </head>
 <body>
@@ -26,11 +26,19 @@
 
 
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
+<div>
 <form action="" method="POSt">
       {%csrf_token %}
       {{form.as_p}}
-      <button>LogIn</button>
+      <ul>
+     User Name:
+    <li><input type="text"></li><p>
+    Password:
+    <li><input type="email"></li><p>
+      <li><button>Login</button></li>
+      </ul>
 </form>
+</div>
 
 </body>
 </html>
