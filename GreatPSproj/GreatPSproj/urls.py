@@ -24,8 +24,7 @@ urlpatterns = [
 
                   url(r'^admin/', admin.site.urls),
                   # Accounts
-                  url(r'^accounts/register/$', views.scheduling, name='scheduling'),
-                  # url(r'^accounts/register/$', register, name='register'),
+                  url(r'^register/$', register, name='register'),
                   url(r'^accounts/login/$', login, name='login'),
                   url(r'^$', views.template, name='template'),
                   # url(r'^$',views.index, name='index'),

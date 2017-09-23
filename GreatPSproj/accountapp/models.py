@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
 
 
 
@@ -12,7 +14,7 @@ class User(AbstractUser):
     """
 
     REQUIRED_FIELDS = ['email',]
-
+ 
     email = models.EmailField()
 
     cell_phone= models.CharField(max_length=20, null=True, blank=True)

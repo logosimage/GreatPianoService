@@ -18,18 +18,43 @@
             <a  id="item2" href="/services/">Services</a>
             <a id="item3 " href="/login/">Client login</a>
             <a id="item4" href="/scheduling/">Scheduling</a>
-            <a id="item5" href="/support/">Support</a>
+            <!-- <a id="item5" href="/support/">Support</a> -->
             <a id="item6" href="/contact/">Contact</a>
     </div>
 </div>
-<!-- <img src="{% static 'GreatPSapp/images/Piano0_oldhands.png' %}" id="image1" style=""/> -->
-
+<img src="{% static 'GreatPSapp/images/gpsbkgnd.jpg' %}" id="image1" style=""/>
 
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
 <form action="" method="POSt">
     {%csrf_token %}
-    {{form.as_p}}
-    <button>LogIn</button>
+    
+    <form action="" method="POSt">
+      {%csrf_token %}
+     
+  <ul>
+    New Customer Registration<p>
+       <p> Email:
+    <li><input type="Email"></li><p>
+        Cell Phone:
+    <li><input type="text"></li><p>
+        Work Phone:
+    <li><input type="text"></li><p>
+        Home Phone:
+    <li><input type="text"></li><p>
+        Mailing Address:
+    <li><input type="text"></li><p>
+        City:
+    <li><input type="text"></li><p>
+        State:
+    <li><input type="text"></li><p>
+        Zip:
+    <li><input type="text"></li><p>
+        Password:
+    <li><input type="text"></li><p>
+    Confirm Password:
+    <li><input type="text"></li>
+      <li><input type="submit" value="Submit"></li><p>
+  </ul>
 </form>
 
 </body>
