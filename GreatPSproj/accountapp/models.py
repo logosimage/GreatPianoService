@@ -8,10 +8,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    """
-    My custom user model.
-    first_name,
-    """
+    
 
     REQUIRED_FIELDS = ['email',]
  

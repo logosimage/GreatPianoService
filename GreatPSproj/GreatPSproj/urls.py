@@ -14,17 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from GreatPSapp import views
+# importing views links the models.py and project 
+# App to the url.py which in turn links all three to the html template.
 from accountapp.views import login, register
 from django.conf import settings
 from django.conf.urls import url
 from django.conf.urls.static import static
+from django.conf.urls import include
 from django.contrib import admin
+from accountapp import views as accountapp_views
 
 urlpatterns = [
-
+# these urlpatterns lead to there perspective web pages
                   url(r'^admin/', admin.site.urls),
                   # Accounts
-                  url(r'^register/$', register, name='register'),
+                  url(r'^register/$', accountapp_views.register, name='register'),
                   url(r'^accounts/login/$', login, name='login'),
                   url(r'^$', views.template, name='template'),
                   # url(r'^$',views.index, name='index'),

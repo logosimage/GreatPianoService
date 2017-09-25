@@ -1,10 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.shortcuts import HttpResponse
 from .forms import CustomUserCreationForm
-
 from django.contrib.auth.forms import AuthenticationForm
-
 from django.contrib.auth import login as django_login
 from django.contrib.auth import logout as django_logout
 from django.contrib.auth import authenticate
@@ -12,20 +9,32 @@ from django.contrib.auth import authenticate
 
 
 def register(request):
-
-    if request.method == "GET":
-        form = CustomUserCreationForm(data=request.GET)
-    elif request.method == "POST":
-        form = CustomUserCreationForm(data=request.POST)
-
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.Post)
         if form.is_valid():
-            user= form.save(commit=False)
-            #We can make any last second chages to the user.
-            user.save()
-            return  redirect('/')
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password')
+            login(request, user)
+            return redirect('home')
+        else:
+            form = CustomUserCreationForm()
+        return render(request, 'register.html', {'form': form})
 
-    context = {'form':form}
-    return render(request,'register.html', context)
+
+    # if request.method == "GET":
+    #     form = CustomUserCreationForm(data=request.GET)
+    # elif request.method == "POST":
+    #     form = CustomUserCreationForm(data=request.POST)
+
+    #     if form.is_valid():
+    #         user= form.save(commit=False)
+    #         #We can make any last second chages to the user.
+    #         user.save()
+    #         return  redirect('/')
+
+    # context = {'form':form}
+    # return render(request,'register.html', context)
 
 
 
