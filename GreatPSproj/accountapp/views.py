@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import HttpResponse
 from .forms import CustomUserCreationForm
+from .forms import User
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as django_login
 from django.contrib.auth import logout as django_logout
@@ -9,19 +10,6 @@ from django.contrib.auth import authenticate
 
 
 def register(request):
-    # if request.method == 'POST':
-    #     form = CustomUserCreationForm(request.Post)
-    #     if form.is_valid():
-    #         form.save()
-    #         username = form.cleaned_data.get('username')
-    #         raw_password = form.cleaned_data.get('password')
-    #         login(request, user)
-    #         return redirect('home')
-    #     else:
-    #         form = CustomUserCreationForm()
-    #     return render(request, 'register.html', {'form': form})
-
-
     if request.method == "POST":
         form = CustomUserCreationForm(data=request.POST)
     elif request.method == "GET":
