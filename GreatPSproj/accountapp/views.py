@@ -9,32 +9,32 @@ from django.contrib.auth import authenticate
 
 
 def register(request):
-    if request.method == 'POST':
-        form = CustomUserCreationForm(request.Post)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password')
-            login(request, user)
-            return redirect('home')
-        else:
-            form = CustomUserCreationForm()
-        return render(request, 'register.html', {'form': form})
-
-
-    # if request.method == "GET":
-    #     form = CustomUserCreationForm(data=request.GET)
-    # elif request.method == "POST":
-    #     form = CustomUserCreationForm(data=request.POST)
-
+    # if request.method == 'POST':
+    #     form = CustomUserCreationForm(request.Post)
     #     if form.is_valid():
-    #         user= form.save(commit=False)
-    #         #We can make any last second chages to the user.
-    #         user.save()
-    #         return  redirect('/')
+    #         form.save()
+    #         username = form.cleaned_data.get('username')
+    #         raw_password = form.cleaned_data.get('password')
+    #         login(request, user)
+    #         return redirect('home')
+    #     else:
+    #         form = CustomUserCreationForm()
+    #     return render(request, 'register.html', {'form': form})
 
-    # context = {'form':form}
-    # return render(request,'register.html', context)
+
+    if request.method == "POST":
+        form = CustomUserCreationForm(data=request.POST)
+    elif request.method == "GET":
+        form = CustomUserCreationForm(data=request.GET)
+
+        if form.is_valid():
+            user= form.save(commit=False)
+            #We can make any last second chages to the user.
+            user.save()
+            return  redirect('/')
+
+    context = {'form':form}
+    return render(request,'register.html', context)
 
 
 
