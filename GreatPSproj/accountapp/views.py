@@ -6,7 +6,9 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as django_login
 from django.contrib.auth import logout as django_logout
 from django.contrib.auth import authenticate
-# from accountapp.forms import CustomUserCreationForm
+from .models import User
+
+
 
 
 def register(request):

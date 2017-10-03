@@ -18,20 +18,18 @@
     text-align: left;
 
 }
-
-#navbar:nth-.item1
-            .item2
-            .item3
-            .item4 {
-    background-color: #fac716;
+/*#item{
+    display: flex;
+    background-color: white;
+    text-decoration-color: white;
     width: 1000px;
     height: 20px;
     font-size: 22px;
     text-align: center;
-      text border-color: transparent; 
+    
 
 }
-
+*/
 #servicelinks {
     display: flex;
     

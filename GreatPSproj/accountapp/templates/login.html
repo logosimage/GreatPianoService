@@ -17,7 +17,7 @@
         <a id="item1" href="/">Home</a>
             <a  id="item2" href="/services/">Services</a>
             <a id="item3 " href="/login/">Client login</a>
-            <a id="item4" href="/scheduling/">Scheduling</a>
+            <a id="item4" href="/scheduling/">Appointments</a>
             <!-- <a id="item5" href="/support/">Support</a> -->
             <a id="item6" href="/contact/">Contact</a>
     </div>
@@ -27,19 +27,25 @@
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
 
 <div class="login">
+   {% block content %}
 <form action="" method="POSt">
       {%csrf_token %}
       {{form.as_p}}
       <ul>
-      Sign In<p
-     User Name:
+      <h2>Sign In</h2><p>
+
+    <li>User Name:</li>
     <li><input type="text"></li><p>
-    Password:
+
+    <li>Password:</li>
     <li><input type="email"></li><p>
+
       <li><button>Login</button></li><p>
        <a href="/register/"> Create an Account</a>
       </ul>
 </form>
+{% endblock %}
+
 
 
 </div>

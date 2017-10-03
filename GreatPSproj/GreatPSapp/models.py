@@ -65,5 +65,17 @@ class Service_Request(models.Model):
     annual_contract = models.CharField(max_length=20)
 
 class Scheduling(models.Model):
-    day = models.CharField(max_length=10)
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
+    email = models.CharField(max_length=30, null=True, blank=True)
+    cell_phone = models.CharField(max_length=30, null=True, blank=True)
+    home_phone = models.CharField(max_length=30, null=True, blank=True)
+    work_phone = models.CharField(max_length=30, null=True, blank=True)
+    address = models.CharField(max_length=30, null=True, blank=True)
+    city = models.CharField(max_length=30, null=True, blank=True)
+    state = models.CharField(max_length=20, null=True, blank=True)
+    zip = models.CharField(max_length=10, null=True, blank=True)
+    day = models.CharField(max_length=10, null=True, blank=True)
     date = models.DateTimeField(null=True, blank=True)
+
+

@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
 
 from .models import Service_Request
+from .models import Scheduling
+from accountapp.models import User
 
 
 #     # Construct a dictionary to pass to the template engine as its context.
@@ -21,6 +23,30 @@ def services(request):
 def login(request):
     return render(request, 'login.html')
 
+# def schedulings(request):
+#     if request.method == 'POST':
+#         print(request.POST)    
+
+def User(request):
+    if request.method == 'POST':
+        print(request.POST)
+
+        form = User()
+        cell_phone = request.POST.get('cell_phone', None)
+
+        work_phone = request.POST.get('work_phone', None)
+        
+        home_phone = request.POST.get('home_phone', None)
+        
+        address = request.POST.get('address', None)
+        
+        city = request.POST.get('city', None)
+        
+        state = request.POST.get('state', None)
+        
+        zip = request.POST.get('zip', None)
+
+        form.save()
 
 def scheduling(request):
     if request.method == 'POST':
@@ -77,7 +103,7 @@ def scheduling(request):
 
         form.save()
 
-        return HttpResponse('<h1> Your request has been received.</h1>')
+        return HttpResponse('<h1> Thank you for submission. We will be contacting you within the next day.</h1><p><a id="item1" href="/">Home</a>')
 
     return render(request, 'scheduling.html')
 

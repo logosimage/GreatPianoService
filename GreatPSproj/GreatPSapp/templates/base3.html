@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head >
+         <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+                <meta charset="UTF-8">
+                  <title>
+                      {% block title_block %}
+                        Home
+                      {% endblock %}
+                  </title>
+
+          <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
+            
+    </head>
+        <body>
+          <div>
+            {% block body_block %}
+            {% endblock %}
+          </div>
+            
+             <div class="header" id="section1">
+                
+                    <div class="titleGPS"><h1 id="h1">Great Piano Service</h1></div>
+                    
+
+                            <div id="navbar">
+                        
+                            <a id="item1" href="{% url 'template' %}">Home</a>
+                            <a id="item2" href="{% url 'services' %}">Services</a>
+                            <a id="item3 " href="{% url 'login' %}">Client login</a>
+                            <a id="item4" href="{% url 'scheduling' %}">Appointments</a>
+                            <a id="item6" href="{% url 'contact' %}">Contact</a>
+                       
+                    </div>
+
+            </div>
+             
+
+              <img src="{% static 'GreatPSapp/images/gpsbkgnd.jpg' %}" id="image1" style=""/>
+
+              <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
+             
+        </body>
+  </html>
+
+

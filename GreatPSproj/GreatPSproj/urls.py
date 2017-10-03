@@ -24,6 +24,7 @@ from django.conf.urls import include
 from django.contrib import admin
 from accountapp import views as accountapp_views
 
+app_name = 'GreatPSapp'
 urlpatterns = [
 # these urlpatterns lead to there perspective web pages
                   url(r'^admin/', admin.site.urls),
@@ -35,6 +36,7 @@ urlpatterns = [
                   url(r'^services/$', views.services, name='services'),
                   url(r'^login/$', views.login, name='login'),
                   url(r'^scheduling/$', views.scheduling, name='scheduling'),
+                  url(r'^User/accountapp$', views.User, name='User'),
                   url(r'^support/$', views.support, name='support'),
                   url(r'^contact/$', views.contact, name='contact')
 
