@@ -1,33 +1,16 @@
-<!DOCTYPE html>
-
+{% extends 'base.html' %}
 {% load staticfiles %}
 
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head >
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Login/Regester</title>
-    <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
-</head>
-<body>
-<div class="flex-container">
-   
-    <div class="titleGPS"><h1 id="h1">Great Piano Service</h1></div>
-    <div id="navbar">
-        <a id="item1" href="/">Home</a>
-            <a  id="item2" href="/services/">Services</a>
-            <a id="item3 " href="/login/">Client login</a>
-            <a id="item4" href="/scheduling/">Appointments</a>
-            <!-- <a id="item5" href="/support/">Support</a> -->
-            <a id="item6" href="/contact/">Contact</a>
-    </div>
-</div>
-<img src="{% static 'GreatPSapp/images/gpsbkgnd.jpg' %}" id="image1" style=""/>
 
-<script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
+{% block title_block %}
+Login
+    {{ login }}
+{% endblock %}
 
-<div class="login">
-   {% block content %}
+
+
+{% block body_block %}
+{% block content %}
 <form action="" method="POSt">
       {%csrf_token %}
       {{form.as_p}}
@@ -46,12 +29,6 @@
 </form>
 {% endblock %}
 
-
-
-</div>
-
-</body>
-</html>
-
+{% endblock %}
 
 

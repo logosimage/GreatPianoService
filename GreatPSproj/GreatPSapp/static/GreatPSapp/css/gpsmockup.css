@@ -90,3 +90,16 @@
     height: 180px;
 }
 
+
+.footer_div{
+    display: flex;
+    background-color: black;
+    widows: 1000px;
+    height: 150px;
+
+}
+
+#footer{
+    
+
+}

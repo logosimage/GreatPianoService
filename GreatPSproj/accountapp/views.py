@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate
 from .models import User
 
 
-
+ 
 
 def register(request):
     if request.method == "POST":

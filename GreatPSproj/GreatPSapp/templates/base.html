@@ -3,21 +3,20 @@
 {% load staticfiles %}
 
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <head >
-        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+       
         <meta charset="UTF-8">
         <title>
+        
         {% block title_block %}
-          Home
+         GOD RULES
         {% endblock %}
         </title>
         <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
     </head>
         <body>
-          <div>
-            {% block body_block %}
-            {% endblock %}
-          </div>
+          
             <div class="flex-container">
               <div class="header" id="section1">
                 <div class="titleGPS"><h1 id="h1">Great Piano Service</h1></div>
@@ -29,6 +28,8 @@
                     <a id="item6" href="{% url 'contact' %}">Contact</a>
               </div>
             </div>
+            
+          </div>
 
     <section class="attraction" id="section2">
         <div></div></section>
@@ -47,7 +48,22 @@
 </div>
  </section>
  
- 
+ <div>
+            {% block body_block %}
+            
+            {% endblock %}
+
+            <div class="footer_div">
+              <footer id="footer"><p>
+                 <p><div id="navbar">
+                    <a href="{% url 'template' %}">Home</a>
+                    <a href="{% url 'services' %}">Services</a>
+                    <a href="{% url 'login' %}">Client login</a>
+                    <a href="{% url 'scheduling' %}">Appointments</a>
+                    <a href="{% url 'contact' %}">Contact</a>
+              
+              </footer>
+            </div>
 
 <script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
 

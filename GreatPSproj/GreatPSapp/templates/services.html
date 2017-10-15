@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-
+{% extends 'base.html' %}
 {% load staticfiles %}
 
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Services</title>
-    <link rel="stylesheet" href="{% static 'GreatPSapp/css/gpsmockup.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-</head>
-<body>
-<div class="flex-container">
-    
-    <div class="titleGPS"><h1 id="h1">Great Piano Service</h1></div>
-    <div id="navbar">
-        <a id="item1" href="/">Home</a>
-            <a  id="item2" href="/services/">Services</a>
-            <a id="item3 " href="/login/">Client login</a>
-            <a id="item4" href="/scheduling/">Appointments</a>
-            <!-- <a id="item5" href="/support/">Support</a> -->
-            <a id="item6" href="/contact/">Contact</a>
-    </div>
-</div>
-<img src="{% static 'GreatPSapp/images/gpsbkgnd.jpg' %}" id="image1" style=""/>
-    <div class="services" id="section3">
+
+{% block title_block %}
+Services
+    {{services }}
+{% endblock %}
+
+
+
+{% block body_block %}
+ <div class="services" id="section3">
       <div class="servicelinks">
       <ul>
         <li><div id="tuning" id="preview">Tuning</div></li>
@@ -37,10 +24,5 @@
         </ul>
 
       </div>
- 
+{% endblock %}
 
-
-<script src="{% static 'GreatPSapp/js/gpsmockup.js' %}"></script>
-
-</body>
-</html>
