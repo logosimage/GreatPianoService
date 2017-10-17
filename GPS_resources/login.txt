@@ -1,0 +1,95 @@
+User login
+
+Five URLs for login
+
+#user auth urls
+url(r'^accounts/login/$', ' .views.login')
+url(r'^accounts/auth/$' , ' .views.auth_view')
+url(r'^accounts/logout/$' , ' .views.logout')
+url(r'^accounts/loggedin/$' , ' .views.loggedin')
+url(r'^accounts/invalid/$' , ' .views.invalid_login')
+
+
+Five Methods:
+
+Site wide views
+
+from django.shortcuts imporet render_to_response
+from django.http import HttpResponseRedirect
+from django.contrib import auth
+from django.core.context_processors import csrf
+
+def login(request):
+    c - {}
+    c.update(csfr(request))
+    return render_toresponse('login.html', c)
+
+def auth_view(request):
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    user = auth.authenticate(username=username. password=password)
+    
+    if user is not None:
+        auth.login(request, user)
+        return HttpResponseRedirect('/accounts/loggedin')
+    else:
+        return HttpResponseRedirect('/accounts/invalid')
+
+
+def logged in(request):
+    return render_to_response('loggedin.html',
+			      {'full_name': request.user.username})
+
+def invalid_login(request):
+    return render_to_response('invalid_login.html')
+
+def logout(request):
+    return render_to_response('logout.html')
+
+
+loggedin.html: (template)
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2> Hello {{full_name}} you are now logged in!</h2>
+<p>Click<a href="/account/logout/"here</a> to logout.</p>
+
+{% endblock %}
+
+
+login.html(template)
+
+{% extends "base.html" %}
+{% block content %}
+   {% if form.errors %}
+      <p class="error">Sorry, that's not a valid username or passowrd</p>
+{% endif %}
+
+<form actions="/accounts/auth/" nethod = "post">{% csrf_token %}
+<lable for="username">User name:;</lable>
+<input type="text" name="username" value=" " id= "username">
+<label for="password">Password:</lable>
+<input type="password: name="password" value=" " id="password">
+
+<input type="submit" value="login" />
+</form>
+{% endblock %}
+
+
+invalid_loggin.html(template)
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2> Your login details are invalid!</h2>
+<p>Click<a href="/account/login/"here</a> to loging again.</p>
+
+{% endblock %}
+
+
+
+
+
+

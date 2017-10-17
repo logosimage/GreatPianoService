@@ -26,8 +26,9 @@ from accountapp import views as accountapp_views
 
 app_name = 'GreatPSapp'
 urlpatterns = [
-# these urlpatterns lead to there perspective web pages
-                  url(r'^admin/', admin.site.urls),
+# these urlpatterns lead to there perspective views 
+# which in turn lead to their perspective web pages
+                  url(r'^admin/', include(admin.site.urls)),
                   # Accounts
                   url(r'^register/$', accountapp_views.register, name='register'),
                   url(r'^accounts/login/$', login, name='login'),
@@ -39,5 +40,4 @@ urlpatterns = [
                   url(r'^User/accountapp$', views.User, name='User'),
                   url(r'^support/$', views.support, name='support'),
                   url(r'^contact/$', views.contact, name='contact')
-
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
